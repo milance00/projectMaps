@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>KML</title>
+    <link rel="stylesheet" href="node_modules/ol/ol.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="sidebar">
+        <h1>Mape</h1>
+        <div id="sidebarMenuTermo"></div>
+
+        <hr class="hr-text gradient" data-content="MARKERI" />
+        <div id="sidebarMenuMarker"></div>
+        <hr class="hr-text gradient" data-content="POLIGONI" />
+        <div id="sidebarMenuPolygon"></div>
+
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+
+        <button id="btnMarker" class="dugme">Marker</button>
+        <br />
+        <br />
+        <button id="btnPolygon" class="dugme">Polygon</button>
+        <br />
+        <br />
+        <button id="btnSacuvaj" class="dugme">Sačuvaj</button>
+        <br />
+        <br />
+      </div>
+
+      <div id="map" class="map"></div>
+    </div>
+    <div id="overlayModal">
+      <div id="popup">
+        <h2>Unesite <span id="spanPopup"></span></h2>
+        <label for="nameModal">Ime:</label><br />
+        <input
+          type="text"
+          id="nameModal"
+          name="name"
+          placeholder="Unesite ime: "
+          required
+        /><br />
+        <label for="descriptionModal">Opis:</label><br />
+        <textarea
+          id="descriptionModal"
+          name="description"
+          cols="50"
+          rows="10"
+          placeholder="Unesite opis: "
+        ></textarea
+        ><br />
+        <input type="file" id="fileInput" name="fileInput" accept="image/*" />
+
+        <img
+          id="slikaModal"
+          style="width: 300px; height: 150px; display: none"
+        />
+        <br />
+        <button id="delImageModal" style="display: none">Izbrisi sliku</button>
+        <br />
+        <button type="button" id="CloseModalSave">Save</button>
+        <br />
+        <button id="CloseModal">Zatvori</button>
+      </div>
+    </div>
+
+    <script type="module" src="main.js" async></script>
+  </body>
+</html>
